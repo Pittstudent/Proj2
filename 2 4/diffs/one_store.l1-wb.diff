@@ -1,0 +1,78 @@
+Memory system setup successful.					Memory system setup successful.
+========================================================	========================================================
+
+Printing all memory objects ... 				Printing all memory objects ... 
+
+[DL1Cache]							[DL1Cache]
+device type = cache						device type = cache
+write policy = WB						write policy = WB
+hit time = 2							hit time = 2
+capacity = 8192							capacity = 8192
+block size = 64							block size = 64
+associativity = 1						associativity = 1
+lower level = L2Cache						lower level = L2Cache
+
+[IL1Cache]							[IL1Cache]
+device type = cache						device type = cache
+write policy = WB						write policy = WB
+hit time = 2							hit time = 2
+capacity = 8192							capacity = 8192
+block size = 64							block size = 64
+associativity = 1						associativity = 1
+lower level = L2Cache						lower level = L2Cache
+
+[L2Cache]							[L2Cache]
+device type = cache						device type = cache
+write policy = WB						write policy = WB
+hit time = 10							hit time = 10
+capacity = 16384						capacity = 16384
+block size = 64							block size = 64
+associativity = 4						associativity = 4
+lower level = Memory						lower level = Memory
+
+[Memory]							[Memory]
+device type = dram						device type = dram
+hit time = 100							hit time = 100
+
+========================================================	========================================================
+[IF CYCLE: 1] STORE: (Seq:        1)(Addr: 39168)(PC: 0)	[IF CYCLE: 1] STORE: (Seq:        1)(Addr: 39168)(PC: 0)
+IL1Cache->access(MemRead, addr: 0, latency: 2)			IL1Cache->access(MemRead, addr: 0, latency: 2)
+L2Cache->access(MemRead, addr: 0, latency: 12)			L2Cache->access(MemRead, addr: 0, latency: 12)
+Memory->access(MemRead, addr: 0, latency: 112)			Memory->access(MemRead, addr: 0, latency: 112)
+CYCLE: 1 -> 112							CYCLE: 1 -> 112
+========================================================	========================================================
+Printing all cache contents ...					Printing all cache contents ...
+[DL1Cache]							[DL1Cache]
+[IL1Cache]							[IL1Cache]
+							   >	(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]							[L2Cache]
+							   >	(0, 0) tag=0:valid=1:dirty=0:age=0
+========================================================	========================================================
+[MEM CYCLE: 115] STORE: (Seq:        1)(Addr: 39168)(PC:	[MEM CYCLE: 115] STORE: (Seq:        1)(Addr: 39168)(PC:
+DL1Cache->access(MemWrite, addr: 39168, latency: 2)		DL1Cache->access(MemWrite, addr: 39168, latency: 2)
+L2Cache->access(MemWrite, addr: 39168, latency: 12)	   |	L2Cache->access(MemRead, addr: 39168, latency: 12)
+Memory->access(MemWrite, addr: 39168, latency: 112)	   |	Memory->access(MemRead, addr: 39168, latency: 112)
+CYCLE: 115 -> 115						CYCLE: 115 -> 115
+========================================================	========================================================
+Printing all cache contents ...					Printing all cache contents ...
+[DL1Cache]							[DL1Cache]
+							   >	(100, 0) tag=4:valid=1:dirty=1:age=0
+[IL1Cache]							[IL1Cache]
+							   >	(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]							[L2Cache]
+							   >	(0, 0) tag=0:valid=1:dirty=0:age=0
+							   >	(36, 0) tag=9:valid=1:dirty=0:age=0
+========================================================	========================================================
+========================================================	========================================================
+
+Printing all memory stats ... 					Printing all memory stats ... 
+
+DL1Cache:readHits=0:readMisses=0:writeHits=0:writeMisses	DL1Cache:readHits=0:readMisses=0:writeHits=0:writeMisses
+IL1Cache:readHits=0:readMisses=1:writeHits=0:writeMisses	IL1Cache:readHits=0:readMisses=1:writeHits=0:writeMisses
+L2Cache:readHits=0:readMisses=1:writeHits=0:writeMisses=   |	L2Cache:readHits=0:readMisses=2:writeHits=0:writeMisses=
+Memory:readHits=1:writeHits=1				   |	Memory:readHits=2:writeHits=0
+
+========================================================	========================================================
++ Memory stall cycles : 111					+ Memory stall cycles : 111
++ Number of cycles : 116					+ Number of cycles : 116
++ IPC (Instructions Per Cycle) : 0.0086				+ IPC (Instructions Per Cycle) : 0.0086

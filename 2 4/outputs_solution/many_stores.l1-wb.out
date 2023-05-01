@@ -1,0 +1,270 @@
+Memory system setup successful.
+======================================================================
+
+Printing all memory objects ... 
+
+[DL1Cache]
+device type = cache
+write policy = WB
+hit time = 2
+capacity = 8192
+block size = 64
+associativity = 1
+lower level = L2Cache
+
+[IL1Cache]
+device type = cache
+write policy = WB
+hit time = 2
+capacity = 8192
+block size = 64
+associativity = 1
+lower level = L2Cache
+
+[L2Cache]
+device type = cache
+write policy = WB
+hit time = 10
+capacity = 16384
+block size = 64
+associativity = 4
+lower level = Memory
+
+[Memory]
+device type = dram
+hit time = 100
+
+======================================================================
+[IF CYCLE: 1] STORE: (Seq:        1)(Addr: 39168)(PC: 0)
+IL1Cache->access(MemRead, addr: 0, latency: 2)
+L2Cache->access(MemRead, addr: 0, latency: 12)
+Memory->access(MemRead, addr: 0, latency: 112)
+CYCLE: 1 -> 112
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+======================================================================
+[IF CYCLE: 113] STORE: (Seq:        2)(Addr: 71936)(PC: 4)
+IL1Cache->access(MemRead, addr: 4, latency: 2)
+CYCLE: 113 -> 114
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+======================================================================
+[IF CYCLE: 115] STORE: (Seq:        3)(Addr: 104704)(PC: 8)
+IL1Cache->access(MemRead, addr: 8, latency: 2)
+CYCLE: 115 -> 116
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+======================================================================
+[MEM CYCLE: 117] STORE: (Seq:        1)(Addr: 39168)(PC: 0)
+DL1Cache->access(MemWrite, addr: 39168, latency: 2)
+L2Cache->access(MemRead, addr: 39168, latency: 12)
+Memory->access(MemRead, addr: 39168, latency: 112)
+CYCLE: 117 -> 117
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=4:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=0:age=0
+======================================================================
+[IF CYCLE: 117] STORE: (Seq:        4)(Addr: 137472)(PC: 12)
+IL1Cache->access(MemRead, addr: 12, latency: 2)
+CYCLE: 117 -> 118
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=4:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=0:age=0
+======================================================================
+[MEM CYCLE: 119] STORE: (Seq:        2)(Addr: 71936)(PC: 4)
+DL1Cache->access(MemWrite, addr: 71936, latency: 2)
+L2Cache->access(MemRead, addr: 71936, latency: 12)
+Memory->access(MemRead, addr: 71936, latency: 112)
+L2Cache->access(MemWriteBack, addr: 39168, latency: 10)
+CYCLE: 119 -> 119
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=8:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=1:age=0
+(36, 1) tag=17:valid=1:dirty=0:age=1
+======================================================================
+[IF CYCLE: 119] STORE: (Seq:        5)(Addr: 170240)(PC: 16)
+IL1Cache->access(MemRead, addr: 16, latency: 2)
+CYCLE: 119 -> 120
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=8:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=1:age=0
+(36, 1) tag=17:valid=1:dirty=0:age=1
+======================================================================
+[MEM CYCLE: 121] STORE: (Seq:        3)(Addr: 104704)(PC: 8)
+DL1Cache->access(MemWrite, addr: 104704, latency: 2)
+L2Cache->access(MemRead, addr: 104704, latency: 12)
+Memory->access(MemRead, addr: 104704, latency: 112)
+L2Cache->access(MemWriteBack, addr: 71936, latency: 10)
+CYCLE: 121 -> 121
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=12:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=1:age=2
+(36, 1) tag=17:valid=1:dirty=1:age=0
+(36, 2) tag=25:valid=1:dirty=0:age=1
+======================================================================
+[IF CYCLE: 121] STORE: (Seq:        6)(Addr: 39168)(PC: 20)
+IL1Cache->access(MemRead, addr: 20, latency: 2)
+CYCLE: 121 -> 122
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=12:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=1:age=2
+(36, 1) tag=17:valid=1:dirty=1:age=0
+(36, 2) tag=25:valid=1:dirty=0:age=1
+======================================================================
+[MEM CYCLE: 123] STORE: (Seq:        4)(Addr: 137472)(PC: 12)
+DL1Cache->access(MemWrite, addr: 137472, latency: 2)
+L2Cache->access(MemRead, addr: 137472, latency: 12)
+Memory->access(MemRead, addr: 137472, latency: 112)
+L2Cache->access(MemWriteBack, addr: 104704, latency: 10)
+CYCLE: 123 -> 123
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=16:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=1:age=4
+(36, 1) tag=17:valid=1:dirty=1:age=2
+(36, 2) tag=25:valid=1:dirty=1:age=0
+(36, 3) tag=33:valid=1:dirty=0:age=1
+======================================================================
+[IF CYCLE: 123] STORE: (Seq:        7)(Addr: 137472)(PC: 24)
+IL1Cache->access(MemRead, addr: 24, latency: 2)
+CYCLE: 123 -> 124
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=16:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=9:valid=1:dirty=1:age=4
+(36, 1) tag=17:valid=1:dirty=1:age=2
+(36, 2) tag=25:valid=1:dirty=1:age=0
+(36, 3) tag=33:valid=1:dirty=0:age=1
+======================================================================
+[MEM CYCLE: 125] STORE: (Seq:        5)(Addr: 170240)(PC: 16)
+DL1Cache->access(MemWrite, addr: 170240, latency: 2)
+L2Cache->access(MemRead, addr: 170240, latency: 12)
+Memory->access(MemRead, addr: 170240, latency: 112)
+Memory->access(MemWriteBack, addr: 39168, latency: 100)
+L2Cache->access(MemWriteBack, addr: 137472, latency: 10)
+CYCLE: 125 -> 125
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=20:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=41:valid=1:dirty=0:age=1
+(36, 1) tag=17:valid=1:dirty=1:age=4
+(36, 2) tag=25:valid=1:dirty=1:age=2
+(36, 3) tag=33:valid=1:dirty=1:age=0
+======================================================================
+[MEM CYCLE: 126] STORE: (Seq:        6)(Addr: 39168)(PC: 20)
+DL1Cache->access(MemWrite, addr: 39168, latency: 2)
+L2Cache->access(MemRead, addr: 39168, latency: 12)
+Memory->access(MemRead, addr: 39168, latency: 112)
+Memory->access(MemWriteBack, addr: 71936, latency: 100)
+L2Cache->access(MemWriteBack, addr: 170240, latency: 10)
+CYCLE: 126 -> 126
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=4:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=41:valid=1:dirty=1:age=0
+(36, 1) tag=9:valid=1:dirty=0:age=1
+(36, 2) tag=25:valid=1:dirty=1:age=4
+(36, 3) tag=33:valid=1:dirty=1:age=2
+======================================================================
+[MEM CYCLE: 127] STORE: (Seq:        7)(Addr: 137472)(PC: 24)
+DL1Cache->access(MemWrite, addr: 137472, latency: 2)
+L2Cache->access(MemRead, addr: 137472, latency: 12)
+L2Cache->access(MemWriteBack, addr: 39168, latency: 10)
+CYCLE: 127 -> 127
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+(100, 0) tag=16:valid=1:dirty=1:age=0
+[IL1Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+[L2Cache]
+(0, 0) tag=0:valid=1:dirty=0:age=0
+(36, 0) tag=41:valid=1:dirty=1:age=2
+(36, 1) tag=9:valid=1:dirty=1:age=0
+(36, 2) tag=25:valid=1:dirty=1:age=6
+(36, 3) tag=33:valid=1:dirty=1:age=1
+======================================================================
+======================================================================
+
+Printing all memory stats ... 
+
+DL1Cache:readHits=0:readMisses=0:writeHits=0:writeMisses=7:writeBacks=6
+IL1Cache:readHits=6:readMisses=1:writeHits=0:writeMisses=0:writeBacks=0
+L2Cache:readHits=1:readMisses=7:writeHits=0:writeMisses=0:writeBacks=2
+Memory:readHits=7:writeHits=0
+
+======================================================================
++ Memory stall cycles : 117
++ Number of cycles : 128
++ IPC (Instructions Per Cycle) : 0.0547

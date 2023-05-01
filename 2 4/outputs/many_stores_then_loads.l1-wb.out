@@ -1,0 +1,358 @@
+Memory system setup successful.
+======================================================================
+
+Printing all memory objects ... 
+
+[DL1Cache]
+device type = cache
+write policy = WB
+hit time = 2
+capacity = 8192
+block size = 64
+associativity = 1
+lower level = L2Cache
+
+[IL1Cache]
+device type = cache
+write policy = WB
+hit time = 2
+capacity = 8192
+block size = 64
+associativity = 1
+lower level = L2Cache
+
+[L2Cache]
+device type = cache
+write policy = WB
+hit time = 10
+capacity = 16384
+block size = 64
+associativity = 4
+lower level = Memory
+
+[Memory]
+device type = dram
+hit time = 100
+
+======================================================================
+[IF CYCLE: 1] STORE: (Seq:        1)(Addr: 39168)(PC: 0)
+IL1Cache->access(MemRead, addr: 0, latency: 2)
+L2Cache->access(MemRead, addr: 0, latency: 12)
+Memory->access(MemRead, addr: 0, latency: 112)
+CYCLE: 1 -> 112
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 113] STORE: (Seq:        2)(Addr: 71936)(PC: 4)
+IL1Cache->access(MemRead, addr: 4, latency: 2)
+L2Cache->access(MemRead, addr: 4, latency: 12)
+Memory->access(MemRead, addr: 4, latency: 112)
+CYCLE: 113 -> 224
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 225] STORE: (Seq:        3)(Addr: 104704)(PC: 8)
+IL1Cache->access(MemRead, addr: 8, latency: 2)
+L2Cache->access(MemRead, addr: 8, latency: 12)
+Memory->access(MemRead, addr: 8, latency: 112)
+CYCLE: 225 -> 336
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 337] STORE: (Seq:        1)(Addr: 39168)(PC: 0)
+DL1Cache->access(MemWrite, addr: 39168, latency: 2)
+L2Cache->access(MemWrite, addr: 39168, latency: 12)
+Memory->access(MemWrite, addr: 39168, latency: 112)
+CYCLE: 337 -> 337
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 337] STORE: (Seq:        4)(Addr: 137472)(PC: 12)
+IL1Cache->access(MemRead, addr: 12, latency: 2)
+L2Cache->access(MemRead, addr: 12, latency: 12)
+Memory->access(MemRead, addr: 12, latency: 112)
+CYCLE: 337 -> 448
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 449] STORE: (Seq:        2)(Addr: 71936)(PC: 4)
+DL1Cache->access(MemWrite, addr: 71936, latency: 2)
+L2Cache->access(MemWrite, addr: 71936, latency: 12)
+Memory->access(MemWrite, addr: 71936, latency: 112)
+CYCLE: 449 -> 449
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 449] STORE: (Seq:        5)(Addr: 170240)(PC: 16)
+IL1Cache->access(MemRead, addr: 16, latency: 2)
+L2Cache->access(MemRead, addr: 16, latency: 12)
+Memory->access(MemRead, addr: 16, latency: 112)
+CYCLE: 449 -> 560
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 561] STORE: (Seq:        3)(Addr: 104704)(PC: 8)
+DL1Cache->access(MemWrite, addr: 104704, latency: 2)
+L2Cache->access(MemWrite, addr: 104704, latency: 12)
+Memory->access(MemWrite, addr: 104704, latency: 112)
+CYCLE: 561 -> 561
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 561] STORE: (Seq:        6)(Addr: 39168)(PC: 20)
+IL1Cache->access(MemRead, addr: 20, latency: 2)
+L2Cache->access(MemRead, addr: 20, latency: 12)
+Memory->access(MemRead, addr: 20, latency: 112)
+CYCLE: 561 -> 672
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 673] STORE: (Seq:        4)(Addr: 137472)(PC: 12)
+DL1Cache->access(MemWrite, addr: 137472, latency: 2)
+L2Cache->access(MemWrite, addr: 137472, latency: 12)
+Memory->access(MemWrite, addr: 137472, latency: 112)
+CYCLE: 673 -> 673
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 673] STORE: (Seq:        7)(Addr: 137472)(PC: 24)
+IL1Cache->access(MemRead, addr: 24, latency: 2)
+L2Cache->access(MemRead, addr: 24, latency: 12)
+Memory->access(MemRead, addr: 24, latency: 112)
+CYCLE: 673 -> 784
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 785] STORE: (Seq:        5)(Addr: 170240)(PC: 16)
+DL1Cache->access(MemWrite, addr: 170240, latency: 2)
+L2Cache->access(MemWrite, addr: 170240, latency: 12)
+Memory->access(MemWrite, addr: 170240, latency: 112)
+CYCLE: 785 -> 785
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 785] LOAD: (Seq:        8)(Addr: 39168)(PC: 28)
+IL1Cache->access(MemRead, addr: 28, latency: 2)
+L2Cache->access(MemRead, addr: 28, latency: 12)
+Memory->access(MemRead, addr: 28, latency: 112)
+CYCLE: 785 -> 896
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 897] STORE: (Seq:        6)(Addr: 39168)(PC: 20)
+DL1Cache->access(MemWrite, addr: 39168, latency: 2)
+L2Cache->access(MemWrite, addr: 39168, latency: 12)
+Memory->access(MemWrite, addr: 39168, latency: 112)
+CYCLE: 897 -> 897
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 897] LOAD: (Seq:        9)(Addr: 71936)(PC: 32)
+IL1Cache->access(MemRead, addr: 32, latency: 2)
+L2Cache->access(MemRead, addr: 32, latency: 12)
+Memory->access(MemRead, addr: 32, latency: 112)
+CYCLE: 897 -> 1008
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 1009] STORE: (Seq:        7)(Addr: 137472)(PC: 24)
+DL1Cache->access(MemWrite, addr: 137472, latency: 2)
+L2Cache->access(MemWrite, addr: 137472, latency: 12)
+Memory->access(MemWrite, addr: 137472, latency: 112)
+CYCLE: 1009 -> 1009
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 1009] LOAD: (Seq:       10)(Addr: 104704)(PC: 36)
+IL1Cache->access(MemRead, addr: 36, latency: 2)
+L2Cache->access(MemRead, addr: 36, latency: 12)
+Memory->access(MemRead, addr: 36, latency: 112)
+CYCLE: 1009 -> 1120
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 1121] LOAD: (Seq:        8)(Addr: 39168)(PC: 28)
+DL1Cache->access(MemRead, addr: 39168, latency: 2)
+L2Cache->access(MemRead, addr: 39168, latency: 12)
+Memory->access(MemRead, addr: 39168, latency: 112)
+CYCLE: 1121 -> 1232
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 1232] LOAD: (Seq:       11)(Addr: 137472)(PC: 40)
+IL1Cache->access(MemRead, addr: 40, latency: 2)
+L2Cache->access(MemRead, addr: 40, latency: 12)
+Memory->access(MemRead, addr: 40, latency: 112)
+CYCLE: 1232 -> 1343
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 1344] LOAD: (Seq:        9)(Addr: 71936)(PC: 32)
+DL1Cache->access(MemRead, addr: 71936, latency: 2)
+L2Cache->access(MemRead, addr: 71936, latency: 12)
+Memory->access(MemRead, addr: 71936, latency: 112)
+CYCLE: 1344 -> 1455
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 1455] LOAD: (Seq:       12)(Addr: 170240)(PC: 44)
+IL1Cache->access(MemRead, addr: 44, latency: 2)
+L2Cache->access(MemRead, addr: 44, latency: 12)
+Memory->access(MemRead, addr: 44, latency: 112)
+CYCLE: 1455 -> 1566
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 1567] LOAD: (Seq:       10)(Addr: 104704)(PC: 36)
+DL1Cache->access(MemRead, addr: 104704, latency: 2)
+L2Cache->access(MemRead, addr: 104704, latency: 12)
+Memory->access(MemRead, addr: 104704, latency: 112)
+CYCLE: 1567 -> 1678
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 1678] LOAD: (Seq:       13)(Addr: 39168)(PC: 48)
+IL1Cache->access(MemRead, addr: 48, latency: 2)
+L2Cache->access(MemRead, addr: 48, latency: 12)
+Memory->access(MemRead, addr: 48, latency: 112)
+CYCLE: 1678 -> 1789
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 1790] LOAD: (Seq:       11)(Addr: 137472)(PC: 40)
+DL1Cache->access(MemRead, addr: 137472, latency: 2)
+L2Cache->access(MemRead, addr: 137472, latency: 12)
+Memory->access(MemRead, addr: 137472, latency: 112)
+CYCLE: 1790 -> 1901
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[IF CYCLE: 1901] LOAD: (Seq:       14)(Addr: 137472)(PC: 52)
+IL1Cache->access(MemRead, addr: 52, latency: 2)
+L2Cache->access(MemRead, addr: 52, latency: 12)
+Memory->access(MemRead, addr: 52, latency: 112)
+CYCLE: 1901 -> 2012
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 2013] LOAD: (Seq:       12)(Addr: 170240)(PC: 44)
+DL1Cache->access(MemRead, addr: 170240, latency: 2)
+L2Cache->access(MemRead, addr: 170240, latency: 12)
+Memory->access(MemRead, addr: 170240, latency: 112)
+CYCLE: 2013 -> 2124
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 2125] LOAD: (Seq:       13)(Addr: 39168)(PC: 48)
+DL1Cache->access(MemRead, addr: 39168, latency: 2)
+L2Cache->access(MemRead, addr: 39168, latency: 12)
+Memory->access(MemRead, addr: 39168, latency: 112)
+CYCLE: 2125 -> 2236
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+[MEM CYCLE: 2237] LOAD: (Seq:       14)(Addr: 137472)(PC: 52)
+DL1Cache->access(MemRead, addr: 137472, latency: 2)
+L2Cache->access(MemRead, addr: 137472, latency: 12)
+Memory->access(MemRead, addr: 137472, latency: 112)
+CYCLE: 2237 -> 2348
+======================================================================
+Printing all cache contents ...
+[DL1Cache]
+[IL1Cache]
+[L2Cache]
+======================================================================
+======================================================================
+
+Printing all memory stats ... 
+
+DL1Cache:readHits=0:readMisses=7:writeHits=0:writeMisses=7:writeBacks=0
+IL1Cache:readHits=0:readMisses=14:writeHits=0:writeMisses=0:writeBacks=0
+L2Cache:readHits=0:readMisses=21:writeHits=0:writeMisses=7:writeBacks=0
+Memory:readHits=21:writeHits=7
+
+======================================================================
++ Memory stall cycles : 2331
++ Number of cycles : 2349
++ IPC (Instructions Per Cycle) : 0.0060
